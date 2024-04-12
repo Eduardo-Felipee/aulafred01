@@ -1,0 +1,29 @@
+--create database Juncao_aula1;
+--go
+--create table Cargo_12 (Cd_cargo char(3) primary key,
+--					cargo varchar(50) not null);
+--insert into Cargo_12 (Cd_cargo, Cargo)
+--values ('C01', 'Presidente'),
+--		 ('C02', 'Diretor'   ),
+--		 ('C03', 'Gerente'   );
+
+--CREATE TABLE Empregado_12 (Matricula char(3) primary key,
+--						   Nome varchar(50) not null,
+--						   Cd_cargo char(3) not null
+--						   References Cargo_12(Cd_cargo));
+
+
+--insert into Empregado_12 (Matricula, Nome, Cd_cargo)
+--values ('E01', 'Pedro', 'C01'),
+--	     ('E02', 'Paulo', 'C02');
+		
+
+--create table Empregado_13 (Matricula char(3) primary key,
+--						   Nome varchar(50) not null,
+--						   Cd_cargo char(3) not null
+--						   References Cargo_12(Cd_cargo));
+
+--insert into Empregado_13 (Matricula, Nome, Cd_cargo)
+--values     ('E02', 'Paulo',     'C02'),
+--	         ('E03', 'Don Diego', 'C01'),
+--		     ('E04', 'Zorro',     'C02');
