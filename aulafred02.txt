@@ -1,0 +1,55 @@
+--use Pedido;
+--create table Cliente_12 (Cd_cliente integer primary key identity (1001,1) not null,
+--					  Nome_cliente varchar(50) not null);
+
+--create table Pedido_12(Nr_pedido integer primary key identity  not null,
+--					   Data_pedido date not null,
+--					   Cd_cliente integer references Cliente_12(Cd_cliente));
+
+--create table Produto_12(Cd_produto integer primary key identity not null,
+--						Ds_produto varchar(50) not null,
+--						Preco decimal(5,2) not null);
+
+--create table Pedido_produto12(Nr_pedido integer not null references Pedido_12 (Nr_pedido),  
+--							  Cd_produto integer not null references Produto_12(Cd_produto),
+--							  Quantidade integer not null,
+--							  Preco decimal(5,2) not null,
+--							  primary key(Nr_pedido, Cd_produto));
+
+--insert into Cliente_12 (Nome_cliente)
+--values ('Pedro'),
+--	     ('Carlos'),
+--	     ('Maria');
+
+--insert into Pedido_12(Data_pedido, Cd_cliente)
+--values ('02/11/2010', 1001),
+--	   ('05/11/2010', 1001),
+--	   ('07/11/2010', 1001),
+--	   ('08/11/2010', 1002);
+
+--insert into Produto_12 (Ds_produto, Preco)
+--values ('Mouse', 180),
+--       ('Teclado',120),
+--	   ('Monitor', 550);
+
+--INSERT INTO Pedido_produto12 
+--            ( Nr_Pedido, Cd_Produto, Quantidade, Preco ) 
+--VALUES 
+--            ( 1, 1, 10, 150 ),
+--            ( 1, 2, 15, 120 ),
+--            ( 1, 3, 20, 530 ),
+--            ( 2, 1, 5 , 140 ),
+--            ( 2, 2, 8 , 130 ),
+--            ( 3, 1, 3 , 150 ),
+--            ( 3, 2, 7 , 130 ),
+--            ( 3, 3, 11, 570 ),
+--            ( 4, 1, 13, 145 ),
+--            ( 4, 2, 17, 135 );
+ 
+--
+
+--	select	Cliente_12.Cd_cliente,
+--			Cliente_12.Nome_cliente,
+--			Pedido_12.Nr_pedido,
+--			Pedido_12.Data_pedido
+--from Pedido_12, CLiente_12 where Cliente_12.Cd_cliente = Pedido_12.Cd_cliente;
